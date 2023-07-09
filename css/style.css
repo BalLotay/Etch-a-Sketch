@@ -1,0 +1,38 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    --flex-basis: 25%;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 500px;
+    border: 2px solid red;
+    align-self: center;
+    min-height: 500px;
+}
+.item {
+    /* TBD in JS file */
+    flex-basis: var(--flex-basis);
+    color: red;
+    min-width: 0;
+    border: 2px solid black;
+}
+
+.fourth {
+    flex: 0 1 0px;
+    overflow: hidden;
+    transition: flex 2s, width 2s;
+    border: none;
+}
+
+.clicked {
+    flex: 1 1 auto;
+    width: 0px; /*This is KEY*/
+    border: 2px solid black;
+}
