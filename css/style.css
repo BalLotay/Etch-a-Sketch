@@ -15,12 +15,7 @@ body {
     margin: 0;
     align-items:center;
     --flex-basis: 25%;
-    /* background-color:rgb(21, 21, 21); */
     background-color: #0d0339;
-    /* background: linear-gradient(#221462, #0d0339); */
-    /* background: linear-gradient(#64e6b2, #166a6f); */
-    /* background: linear-gradient(#e66465, #9198e5); */
-    /* background: linear-gradient(#e664b0, #650f7b); */
 }
 
 .header,
@@ -29,7 +24,6 @@ body {
     justify-content: center;
     align-items: center;
     gap: 5px;
-    /* border: 2px solid black; */
 }
 
 .header {
@@ -52,7 +46,6 @@ body {
 
 img {
     color: var(--key-color);
-    /* text-decoration: none; */
 }
 
 .container {
@@ -68,11 +61,10 @@ img {
     backdrop-filter: 5px;
 }
 .item {
-    /* TBD in JS file */
+    /* TBD in JS script */
     flex-basis: var(--flex-basis);
     color: red;
     min-width: 0;
-    /* border: 1px solid black; */
 }
 
 .corner-square-1 {
