@@ -1,38 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap');
+
 * {
     box-sizing: border-box;
+    font-family: Roboto, sans-serif;
+    --key-color: rgb(24, 221, 165); 
+    color: var(--key-color);
 }
 
 body {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    margin: 0;
+    align-items:center;
     --flex-basis: 25%;
+    /* background-color:rgb(21, 21, 21); */
+    background-color: #0d0339;
+    /* background: linear-gradient(#221462, #0d0339); */
+    /* background: linear-gradient(#64e6b2, #166a6f); */
+    /* background: linear-gradient(#e66465, #9198e5); */
+    /* background: linear-gradient(#e664b0, #650f7b); */
+}
+
+.header,
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    /* border: 2px solid black; */
+}
+
+.header {
+    font-size: 35px;
+    margin-top: 25px;
+    transition: text-shadow 0.3s;
+}
+
+.footer {
+    font-size: 20px;
+    min-height: 20px;
+    margin-bottom: 20px;
+    transition: text-shadow 0.3s;
+}
+
+.header:hover,
+.footer:hover {
+    text-shadow: 0 0 20px azure;
+}
+
+img {
+    color: var(--key-color);
+    /* text-decoration: none; */
 }
 
 .container {
+    align-self: center;
     display: flex;
     flex-wrap: wrap;
     width: 500px;
-    border: 2px solid red;
-    align-self: center;
+    border: 2px solid var(--key-color);
+    box-shadow: 0 0 30px cyan;
     min-height: 500px;
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, .15); 
+    backdrop-filter: 5px;
 }
 .item {
     /* TBD in JS file */
     flex-basis: var(--flex-basis);
     color: red;
     min-width: 0;
-    border: 2px solid black;
+    /* border: 1px solid black; */
 }
 
-.fourth {
-    flex: 0 1 0px;
-    overflow: hidden;
-    transition: flex 2s, width 2s;
+.corner-square-1 {
+    border-top-left-radius: 10px;
+}
+.corner-square-2 {
+    border-top-right-radius: 10px;
+}
+.corner-square-3 {
+    border-bottom-left-radius: 10px;
+}
+.corner-square-4 {
+    border-bottom-right-radius: 10px;
+}
+
+button {
+    height: 35px;
     border: none;
+    background: none;
 }
 
-.clicked {
-    flex: 1 1 auto;
-    width: 0px; /*This is KEY*/
-    border: 2px solid black;
+.rewind-icon {
+    transition: transform 0s;
+}
+
+.turn-360 {
+    transform: rotate(360deg);
+    transition: transform 0.5s;
+}
+
+a {
+    text-decoration: none;
 }
